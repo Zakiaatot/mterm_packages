@@ -403,14 +403,14 @@ main() {
 
 		# Core utilities.
 		PACKAGES+=("bash")
-		PACKAGES+=("bzip2")
+		PACKAGES+=("libbz2")
 		if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
 			PACKAGES+=("command-not-found")
 		else
 			PACKAGES+=("proot")
 		fi
 		PACKAGES+=("coreutils")
-		PACKAGES+=("curl")
+		PACKAGES+=("libcurl")
 		PACKAGES+=("dash")
 		PACKAGES+=("diffutils")
 		PACKAGES+=("findutils")
@@ -426,7 +426,7 @@ main() {
 		PACKAGES+=("termux-keyring")
 		PACKAGES+=("termux-tools")
 		PACKAGES+=("util-linux")
-		PACKAGES+=("xz-utils")
+		# PACKAGES+=("xz-utils")
 
 		# Additional.
 		PACKAGES+=("ed")

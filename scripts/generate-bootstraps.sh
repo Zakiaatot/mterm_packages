@@ -433,14 +433,14 @@ for package_arch in "${TERMUX_ARCHITECTURES[@]}"; do
 
 	# Core utilities.
 	pull_package bash
-	pull_package bzip2
+	pull_package libbz2
 	if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
 		pull_package command-not-found
 	else
 		pull_package proot
 	fi
 	pull_package coreutils
-	pull_package curl
+	pull_package libcurl
 	pull_package dash
 	pull_package diffutils
 	pull_package findutils
@@ -456,7 +456,7 @@ for package_arch in "${TERMUX_ARCHITECTURES[@]}"; do
 	pull_package termux-keyring
 	pull_package termux-tools
 	pull_package util-linux
-	pull_package xz-utils
+	# pull_package xz-utils
 
 	# Additional.
 	pull_package ed

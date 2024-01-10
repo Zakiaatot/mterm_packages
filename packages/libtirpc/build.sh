@@ -16,4 +16,5 @@ termux_step_pre_configure() {
 	aclocal
 	automake
 	autoconf
+	export LDFLAGS="$LDFLAGS -Wl,--undefined-version"
 }
