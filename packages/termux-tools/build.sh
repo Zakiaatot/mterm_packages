@@ -35,4 +35,8 @@ termux_step_pre_configure() {
 termux_step_post_make_install() {
 	cd "$TERMUX_PREFIX"
 	TERMUX_PKG_CONFFILES+=" $(find etc/termux/mirrors -type f)"
+	echo 'if [ ! -f /data/data/com.mterm.mterm/files/home/.config/termux/termux.properties ] && [ ! -e /data/data/com.mterm.mterm/files/home/.termux/termux.properties ]; then
+        mkdir -p /data/data/com.mterm.mterm/files/home/.termux
+        cp /data/data/com.mterm.mterm/files/usr/share/examples/termux/termux.properties /data/data/com.mterm.mterm/files/home/.termux/
+fi' >/data/data/com.mterm.mterm/files/usr/etc/profile.d/init-termux-properties.sh
 }
