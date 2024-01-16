@@ -38,5 +38,8 @@ termux_step_post_make_install() {
 	echo 'if [ ! -f /data/data/com.mterm.mterm/files/home/.config/termux/termux.properties ] && [ ! -e /data/data/com.mterm.mterm/files/home/.termux/termux.properties ]; then
         mkdir -p /data/data/com.mterm.mterm/files/home/.termux
         cp /data/data/com.mterm.mterm/files/usr/share/examples/termux/termux.properties /data/data/com.mterm.mterm/files/home/.termux/
+fi
+if [[ $(dpkg --print-architecture) == "arm64" ]]; then
+    dpkg --add-architecture aarch64
 fi' >/data/data/com.mterm.mterm/files/usr/etc/profile.d/init-termux-properties.sh
 }
