@@ -72,7 +72,7 @@ termux_step_pre_configure() {
 termux_step_post_make_install() {
 	{
 		echo "# The main mterm repository"
-		echo "deb https://repo.mterm.hackerfly.cn/repository/ stable main"
+		echo "deb [trusted=true] https://repo.mterm.hackerfly.cn/repository/ stable main"
 	} > $TERMUX_PREFIX/etc/apt/sources.list
 
 	# apt-transport-tor

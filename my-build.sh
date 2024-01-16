@@ -21,7 +21,8 @@ get_subdirectories() {
 
 debs=$(get_subdirectories "./packages")
 
-archs="aarch64 arm i686 x86_64"
+# archs="aarch64 arm i686 x86_64"
+archs="aarch64"
 
 for deb in $debs; do
     for arch in $archs; do
