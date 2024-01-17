@@ -4,4 +4,5 @@ archs="aarch64"
 
 for arch in $archs; do
     rsync -rv output/*${arch}.deb root@repo.mterm.hackerfly.cn:/www/wwwroot/repo.mterm.hackerfly.cn/repository/pool/${arch}
+    rsync -rv output/*all.deb root@repo.mterm.hackerfly.cn:/www/wwwroot/repo.mterm.hackerfly.cn/repository/pool/${arch}
 done
